@@ -22,17 +22,16 @@ pair<int, int> findTwoSum(const vector<int>& nums, int target) {
 int main() {
     vector<int> numbers;
     int target;
+    int num;  
     
     cout << "Enter numbers followed by \"N\" to stop: ";
-    while (true) {
-        int num;
-        if (!(cin >> num)) break;
+    while (cin >> num) {
         numbers.push_back(num);
     }
-    
-    cout << "Enter target: ";
     cin.clear();
     cin.ignore(numeric_limits<streamsize>::max(), '\n');
+    
+    cout << "Enter target: ";
     cin >> target;
     
     auto result = findTwoSum(numbers, target);
